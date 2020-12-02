@@ -1,0 +1,69 @@
+<div class="form-group">
+  <label for="exampleInputEmail1">Total Sales</label>
+  <input type="text" class="form-control" id="exampleInputEmail1" [(ngModel)]="totalSales">
+</div>
+<div class="form-group">
+  <label for="exampleInputPassword1">Gross Profit</label>
+  <input type="text" class="form-control" id="exampleInputPassword1" [(ngModel)]="grossProfit">
+</div>
+<div class="form-group">
+  <label for="netProfit">Net Profit</label>
+  <input type="text" class="form-control" id="netProfit" [(ngModel)]="netProfit">
+</div>
+<hr>
+<div class="form-group">
+  <label for="currentAssets">Current Assets</label>
+  <input type="text" class="form-control" id="currentAssets" [(ngModel)]="currentAssets">
+</div>
+<hr>
+<div class="form-group">
+  <label for="Inventory">Inventory (Closing Stocks)</label>
+  <input type="text" class="form-control" id="Inventory" [(ngModel)]="inventory">
+</div>
+<hr>
+<div class="form-group">
+  <label for="currentLiabilities">Current Liabilities <small>( bottom of the statement )</small></label>
+  <input type="text" class="form-control" id="currentLiabilities" [(ngModel)]="currentLiabilities">
+</div>
+<hr>
+<hr>
+<div class="form-group">
+  <label for="tradeDebtors">Trade Debtors <small>( under current assets )</small></label>
+  <input type="text" class="form-control" id="tradeDebtors" [(ngModel)]="tradeDebtors">
+</div>
+<hr>
+<div class="form-group">
+  <label for="Equity">Equity and Liabilities <small>( After Total Assets )</small></label>
+  <input type="text" class="form-control" id="Equity" [(ngModel)]="equity">
+</div>
+<hr>
+<div class="form-group">
+  <label for="Debt">Non Current Liabilities / Debt  <small>(After Equity and Liabilities )</small></label>
+  <input type="text" class="form-control" id="Debt" [(ngModel)]="debt">
+</div>
+<p></p>
+<button type="button" (click)="onCalculateClick()" class="btn btn-primary">Calculate</button>
+
+
+
+
+<p></p>
+<h4 class="text-success"> PROFITABILITY RATIOS - Gross Profit Ratio = {{grossProfitRate}}%</h4>
+&nbsp;&nbsp;&nbsp;<h6 class="text-success">High gross profit ratio is good</h6>
+<hr>
+<h4 class="text-success">PROFITABILITY RATIOS - Net Profit Ratio = {{netProfitRate}}%</h4>
+&nbsp;&nbsp;&nbsp;<h6 class="text-success">High net profit ratio is good</h6>
+<hr>
+<h4 class="text-success"> LIQUIDITY RATIOS - Current Ratio = {{currentRate}} : 1</h4>
+&nbsp;&nbsp;&nbsp;<h6 class="text-success">2.0 or > is the industrial standards </h6>
+<hr>
+<h4 class="text-success"> LIQUIDITY RATIOS - Quick Ratio / Acid  = {{quickRate}} : 1</h4>
+&nbsp;&nbsp;&nbsp;<h6 class="text-success">1.0 or > is the industrial standards </h6>
+<hr>
+<h4 class="text-success"> ACTIVITY RATIOS - Receivable days  = {{receivableDays}} days</h4>
+&nbsp;&nbsp;&nbsp;<h6 class="text-success">Less days is good for business</h6>
+<hr>
+<h4 class="text-success"> DEBT RATIOS - Gearing Ratio  = {{gearingRatio}} %</h4>
+&nbsp;&nbsp;&nbsp;<h6 class="text-success">High is good for business</h6>
+&nbsp;&nbsp;&nbsp;<h6 class="text-danger">The more debt the firm has, the greater its risks</h6>
+<!--<h4 class="text-success"> = {{equilibriumQuantity}}</h4>-->

@@ -1,0 +1,15 @@
+<h4 class="text-danger">QD = QS</h4>
+<div class="form-group">
+  <label for="exampleInputEmail1">QD</label>
+  <input type="text" class="form-control" id="exampleInputEmail1" [(ngModel)]="qd">
+</div>
+<div class="form-group">
+  <label for="exampleInputPassword1">QS</label>
+  <input type="text" class="form-control" id="exampleInputPassword1" [(ngModel)]="qs">
+</div>
+<p></p>
+<button type="button" (click)="onEquilibriumCalculateClick()" class="btn btn-primary">Calculate</button>
+
+<p></p>
+<h4 class="text-success">Equilibrium Price = {{finalPrice}}</h4>
+<h4 class="text-success">Equilibrium Quantity = {{equilibriumQuantity}}</h4>

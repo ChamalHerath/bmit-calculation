@@ -1,0 +1,43 @@
+<h4 class="text-danger">ASSETS = CAPITAL + LIABILITIES </h4>
+<div class="form-group">
+  <label for="exampleInputEmail1">ASSETS</label>
+  <input #assetText placeholder="-200,+200 Or 200" type="text" class="form-control" id="exampleInputEmail1" [(ngModel)]="assets">
+</div>
+<div class="form-group">
+  <label for="exampleInputPassword1">CAPITAL</label>
+  <input type="text" class="form-control" id="exampleInputPassword1" [(ngModel)]="capital">
+</div>
+<div class="form-group">
+  <label for="exampleInputPassword2">LIABILITIES</label>
+  <input type="text" class="form-control" id="exampleInputPassword2" [(ngModel)]="liabilities">
+</div>
+<p></p>
+<button type="button" (click)="addToArray()" class="btn btn-primary">Calculate</button>
+<p></p>
+<table class="table">
+  <thead>
+  <tr>
+    <th scope="col">#</th>
+    <th scope="col">Assets</th>
+    <th scope="col">Liability</th>
+    <th scope="col">Capital</th>
+    <th scope="col">Action</th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr *ngFor="let item of tableArr">
+    <th>{{item.id}}</th>
+    <td>{{item.assets}}</td>
+    <td>{{item.capital}}</td>
+    <td>{{item.liabilities}}</td>
+    <td><button type="button" (click)="deleteFromArray(item)" class="btn btn-danger">delete</button></td>
+  </tr>
+
+  </tbody>
+</table>
+<p></p>
+
+<h4 class="text-danger">ASSETS: {{FinalResults.assets}}</h4>
+<h4 class="text-danger">CAPITAL:{{FinalResults.capital}} </h4>
+<h4 class="text-danger">LIABILITIES: {{FinalResults.liabilities}}</h4>
+
